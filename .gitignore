@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.tsbuildinfo
+*.log
+.DS_Store
+.env
+.env.local
+
+# local tool state
+.aet/cache/
+.aet/sessions/

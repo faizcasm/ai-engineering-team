@@ -47,7 +47,7 @@ export const signUpController = asyncHandler(
       );
     }
 
-    const existingUsername = await db.user.findUnique({
+    const existingUsername = await db.user.findFirst({
       where: { username },
     });
 

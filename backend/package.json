@@ -7,16 +7,42 @@
   "scripts": {
     "worker": "tsx watch src/workers/email.worker.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "seed": "tsx prisma/seed.ts",
     "git": "git add . && git commit -m \"${npm_config_m:-auto commit $(date)}\" && git push"
   },
-  "keywords": [],
+  "keywords": [
+    "ai",
+    "llm",
+    "agents",
+    "workflow",
+    "express",
+    "prisma",
+    "typescript",
+    "bullmq",
+    "redis",
+    "mcp",
+    "backend"
+  ],
   "author": "Faizan Hameed",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faizcasm/ai-engineering-team.git"
+  },
+  "bugs": {
+    "url": "https://github.com/faizcasm/ai-engineering-team/issues"
+  },
+  "homepage": "https://github.com/faizcasm/ai-engineering-team#readme",
   "devDependencies": {
     "@types/nodemailer": "^8.0.1",
     "ts-node": "^10.0.0",
+    "tsx": "^4.20.3",
     "typescript": "^7.0.2"
   },
   "dependencies": {

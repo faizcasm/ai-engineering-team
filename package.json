@@ -1,0 +1,66 @@
+{
+  "name": "ai-engineering-team",
+  "version": "1.0.0",
+  "description": "AI Engineering Team (aet) - an open-source agentic coding CLI with a built-in team of AI engineering agents. A free alternative to Claude Code and Codex.",
+  "keywords": [
+    "ai",
+    "cli",
+    "agent",
+    "agentic",
+    "coding-assistant",
+    "llm",
+    "anthropic",
+    "openai",
+    "mcp",
+    "multi-agent",
+    "ai-engineering-team",
+    "claude-code-alternative"
+  ],
+  "type": "module",
+  "bin": {
+    "aet": "dist/src/index.js",
+    "ai-team": "dist/src/index.js",
+    "ai-engineering-team": "dist/src/index.js"
+  },
+  "main": "dist/src/index.js",
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"dist/test\"",
+    "dev": "npm run build && node dist/src/index.js",
+    "start": "node dist/src/index.js",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faizcasm/ai-engineering-team.git"
+  },
+  "bugs": {
+    "url": "https://github.com/faizcasm/ai-engineering-team/issues"
+  },
+  "homepage": "https://github.com/faizcasm/ai-engineering-team#readme",
+  "author": "Faizan Hameed <https://faizcasm.me> (Founder of Ryuksaidso)",
+  "contributors": [
+    "Faizan Hameed <https://faizcasm.me>"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  }
+}

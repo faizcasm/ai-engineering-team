@@ -14,6 +14,9 @@ import type {
 import logger from "./config/logger.config.js";
 import errorHandler from "./middleware/errorHandler.js";
 import userRoutes from "./routes/user.routes.js";
+import aiRoutes from "./routes/ai.routes.js";
+import graphRoutes from "./routes/graph.routes.js";
+import mcpRoutes from "./routes/mcp.routes.js";
 
 dotenv.config();
 
@@ -125,6 +128,12 @@ app.get(
 );
 
 app.use("/api/users", userRoutes);
+
+app.use("/api/ai", aiRoutes);
+
+app.use("/api/graph", graphRoutes);
+
+app.use("/api/mcp", mcpRoutes);
 
 app.use(
   (

@@ -22,13 +22,16 @@ const errorHandler = (
   });
 
   if (error instanceof AppError) {
-    return res.status(error.statusCode).json({
+    const body: Record<string, unknown> = {
       success: false,
       message: error.message,
-      ...(error.errors && {
-        errors: error.errors,
-      }),
-    });
+    };
+
+    if (error.errors !== undefined) {
+      body.errors = error.errors;
+    }
+
+    return res.status(error.statusCode).json(body);
   }
 
   return res.status(500).json({
